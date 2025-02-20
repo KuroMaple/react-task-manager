@@ -9,7 +9,7 @@ function App() {
           React Task Manager
         </h1>
       </header>
-      <Home />
+      <Home/>
     </div>
   );
 }

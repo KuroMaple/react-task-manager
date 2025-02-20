@@ -4,4 +4,28 @@
   background-color: white;
   box-shadow: 2px 2px 2px 2px var(--strikethrough-color);
   padding: 10px;
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.new-button {
+  background-color: #ae7ee9;
+  width: 200px;
+  height: 75px;
+  border-radius: 50px;
+  font-weight: 700;
+  color: white;
+  font-size: larger;
+  position: absolute;
+  bottom: 0px;
+  left: 150px;
+  border: none;
+  cursor: pointer;
+}
+
+.outer-container {
+  position: relative;
+  height: 500px;
 }

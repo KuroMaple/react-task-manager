@@ -7,15 +7,9 @@ const Home = () => {
     fetch("https://jsonplaceholder.typicode.com/todos?_limit=5")
     .then(response => response.json())
     .then(data => setTasks(data))
-
   }, [])
 
-  useEffect(() => {
-    console.log('Parent state updated:', tasks);
-  }, [tasks])
-
   const toggleComplete = (changedTaskId)  => {
-    console.log("updating task id: ", changedTaskId)
     const newTasks = tasks.map((task) =>{
       if(task.id === changedTaskId){
         task.completed = !task.completed // Update complete value for specifc task
@@ -24,16 +18,53 @@ const Home = () => {
     })
     setTasks(newTasks)
   }
+
+  const deleteTask = (changedTaskId)  => {
+    const newTasks = tasks.filter(task => task.id !== changedTaskId)
+    setTasks(newTasks)
+  }
+  
+  const getRandomId = () => {
+    return Math.floor(Math.random() * 99) + 1
+  }
+
+  const addBlankTask = () => {
+    let uniqueRandomId
+    do {
+      uniqueRandomId = getRandomId()
+    } while (
+      tasks.some(task => task.id === uniqueRandomId)
+    )
+    const newTask = 
+    {
+      id: uniqueRandomId,
+      userId: uniqueRandomId,
+      title: "Click here to edit",
+      completed: false
+    }
+    setTasks([...tasks, newTask])
+  }
   
   return (
     <div
-    className="tasks-container">
-      {tasks.map(task => {
-        return <Task 
-        key={task.id} 
-        toggleComplete={() => toggleComplete(task.id)} 
-        {...task} />
-      })}
+    className="outer-container"
+    >
+      <div
+        className="tasks-container">
+        {tasks.map(task => {
+          return <Task 
+          key={task.id} 
+          toggleComplete={() => toggleComplete(task.id)}
+          deleteTask={() => deleteTask(task.id)} 
+          {...task} />
+        })}
+      </div>
+      <button
+          className="new-button"
+          onClick={addBlankTask}
+        > 
+          + New Task
+        </button>
     </div>
   )
 }

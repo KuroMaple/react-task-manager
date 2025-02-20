@@ -9,10 +9,10 @@ A **practice task management app** built with **React (JavaScript)** in **5 hour
 ![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
 ## 🚀 Features
-- 📜 **List Tasks** – Fetch tasks from an API and display them.
-- ➕ **Add Task** – Users can input a new task.
-- ✅ **Mark as Completed** – Users can toggle task completion.
-- ❌ **Delete Task** – Users can remove a task.
+- 📜 **List Tasks** 
+- ➕ **Add Task** 
+- ✅ **Mark as Completed** 
+- ❌ **Delete Task** 
 - 🌐 **Fetch from API** – Loads initial tasks from `jsonplaceholder.typicode.com`.
 
 

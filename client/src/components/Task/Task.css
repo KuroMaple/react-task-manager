@@ -1,7 +1,7 @@
 .Task {
   border: solid 1px black;
   border-radius: 20px;
-  width: 460px;
+  width: 440px;
   padding: 10px;
   height: 50px;
   display: flex;
@@ -61,12 +61,12 @@
   white-space: nowrap;
 }
 
-.delete-icon {
-  font-size: larger;
+.icon {
+  font-size: x-large;
   color: #a6a6b9;
   cursor: pointer;
 }
 
-.delete-icon:hover {
+.icon:hover {
   color: var(--primary-accent);
 }
