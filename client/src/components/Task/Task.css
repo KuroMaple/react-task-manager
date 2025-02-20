@@ -1,0 +1,11 @@
+.Task {
+  display: flex;
+  flex-direction: row;
+  background-color: seagreen;
+  border: solid 2px black;
+  border-radius: 20px;
+  width: 500px;
+  align-items: center;
+  overflow: hidden;
+  gap: 20px;
+}
