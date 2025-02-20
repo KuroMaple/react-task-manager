@@ -17,7 +17,7 @@ A **practice task management app** built with **React (JavaScript)** in **5 hour
 
 
 ## 📸 Screenshots
-_(Add screenshots here after completing the project)_
+![Demo Screenshot](./client/public/demo.png)
 
 ## ⏳ Time Constraint
 This project was built **from start to finish in 5 hours** to simulate a real-world coding challenge under time pressure.
