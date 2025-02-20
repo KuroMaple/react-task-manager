@@ -1,11 +1,72 @@
 .Task {
+  border: solid 1px black;
+  border-radius: 20px;
+  width: 460px;
+  padding: 10px;
+  height: 50px;
   display: flex;
   flex-direction: row;
-  background-color: seagreen;
-  border: solid 2px black;
-  border-radius: 20px;
-  width: 500px;
+  justify-content: center;
   align-items: center;
-  overflow: hidden;
   gap: 20px;
+}
+
+.Task-clickable-area {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  cursor: pointer;
+  position: relative;
+  padding-left: 35px;
+  height: 50px;
+  width: 400px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.Checkbox {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.Custom-Checkbox {
+  position: absolute;
+  top: 14.5;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  border-radius: 30px;
+  border: solid 2px var(--text-color);
+}
+
+/* On mouse-over, add a grey background color */
+.Task-clickable-area:hover input ~ .Custom-Checkbox {
+  background-color: var(--secondary-accent);
+}
+
+.Task-clickable-area input:checked ~ .Custom-Checkbox {
+  background-color: var(--primary-accent);
+}
+.completed-task-title, 
+.incomplete-task-title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.delete-icon {
+  font-size: larger;
+  color: #a6a6b9;
+  cursor: pointer;
+}
+
+.delete-icon:hover {
+  color: var(--primary-accent);
 }
