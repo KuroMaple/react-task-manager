@@ -1,6 +1,6 @@
-const Checkbox = ({value}) => {
+const Checkbox = ({value, onChange}) => {
   return (
-    <input type="checkbox" checked={value}/>
+    <input type="checkbox" checked={value} onChange={onChange}/>
   )
 }
 export default Checkbox

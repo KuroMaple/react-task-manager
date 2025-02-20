@@ -10,8 +10,8 @@ const Task = ({
   return (
     <div className ="Task">
       <Checkbox 
-        checked={completed}
-       onChange={toggleComplete}
+        value={completed}
+        onChange={toggleComplete}
       />
       <h3>
         {id}.{userId}

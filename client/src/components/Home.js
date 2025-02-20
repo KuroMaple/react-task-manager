@@ -15,9 +15,10 @@ const Home = () => {
   }, [tasks])
 
   const toggleComplete = (changedTaskId)  => {
+    console.log("updating task id: ", changedTaskId)
     const newTasks = tasks.map((task) =>{
       if(task.id === changedTaskId){
-        task.complete = !task.complete // Update complete value for specifc task
+        task.completed = !task.completed // Update complete value for specifc task
       }
       return task
     })
